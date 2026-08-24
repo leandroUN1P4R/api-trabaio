@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Posts</h1>
+    <div id="posts"></div>
+
+    <hr>
+    <h2>Criar novo post</h2>
+
+    <form id="post-form">
+        <label for="titulo">Título:</label>
+        <br>
+        <input type="text" id="titulo" required>
+
+        <br><br>
+
+        <label for="corpo">Conteúdo:</label>
+        <br>
+        <textarea id="corpo" required></textarea>
+
+        <br><br>
+
+        <button type="submit" id="botao-enviar">Enviar post</button>
+    </form>
+
+    <p id="mensagem"></p>
+
+    <hr>
+
+    <h2>Editar post</h2>
+
+    <form id="patch-form">
+        <label for="patch-id">ID do post:</label>
+        <br>
+        <input type="number" id="patch-id" min="1" required>
+
+        <br><br>
+
+        <label for="patch-titulo">Novo título:</label>
+        <br>
+        <input type="text" id="patch-titulo" required>
+
+        <br><br>
+
+        <button type="submit" id="botao-editar">
+            Editar Post
+        </button>
+    </form>
+
+    <p id="mensagem-patch"></p>
+
+    <hr>
+
+    <h2>Excluir post</h2>
+
+    <form id="delete-form">
+        <label for="delete-id">ID do post:</label>
+        <br>
+
+        <input
+            type="number"
+            id="delete-id"
+            min="1"
+            required
+        >
+
+        <br><br>
+
+        <button type="submit" id="botao-excluir">
+            Excluir Post
+        </button>
+    </form>
+
+    <p id="mensagem-delete"></p>
+
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
